@@ -31,14 +31,14 @@ test:
     requires:
         - pytest
     imports:
-        - pytools
+        - {{ name }}
     commands:
          - cd $SRC_DIR/test && python -m pytest  # [unix]
-    dev_url: http://github.com/inducer/pytools
+    dev_url: http://github.com/inducer/{{ name }}
 
 
 about:
-    home: http://pypi.python.org/pypi/pytools
+    home: http://pypi.python.org/pypi/{{ name }}
     license: MIT
     summary: A collection of tools for Python
 
