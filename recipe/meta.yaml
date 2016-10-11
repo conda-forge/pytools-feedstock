@@ -1,15 +1,18 @@
 {% set name = "pytools" %}
-{% set version = "2016.2.3" %}
-{% set sha256 = "c5ef4a7ff356a007a75a55d4f1c55b896a7b4284bddf8246e3d8bf33560be747" %}
+{% set version = "2016.2.4" %}
+{% set sha256 = "4d033ae97e83129f21c4af56ca0df752bc3cd92c9f81669b72f0d3071620def5" %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+    name: {{ name|lower }}
+    version: {{ version }}
 
 source:
     fn: {{ name }}-{{ version }}.tar.gz
     url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
     sha256: {{ sha256 }}
+    patches:
+    # remove for 2016.2.5 or later
+    - xfail-diskdict-win.patch
 
 build:
     number: 0
@@ -31,22 +34,25 @@ test:
     requires:
         - pytest
     imports:
-        - pytools
-  commands:
-    - cd $SRC_DIR/test && python -m pytest  # [unix]
-  dev_url: http://github.com/inducer/pytools
+        - {{ name }}
+    commands:
+        - cd $SRC_DIR/test && python -m pytest  # [unix]
+        - cd %SRC_DIR%/test && python -m pytest  # [win]
 
 
 about:
-    home: http://pypi.python.org/pypi/pytools
+    home: http://pypi.python.org/pypi/{{ name }}
     license: MIT
+    license_file: LICENSE
     summary: A collection of tools for Python
 
     description: |
-        Pytools is a big bag of things that are “missing” from the Python standard
+        Pytools is a big bag of things that are "missing" from the Python standard
         library. This is mainly a dependency of my other software packages, and is
-        probably of little interest to you unless you use those. If you’re curious
-        nonetheless, here’s what’s on offer.
+        probably of little interest to you unless you use those. If you're curious
+        nonetheless, here's what's on offer.
+
+    dev_url: http://github.com/inducer/{{ name }}
 
 extra:
     recipe-maintainers:
