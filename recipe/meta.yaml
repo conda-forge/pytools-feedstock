@@ -36,8 +36,8 @@ test:
     imports:
         - {{ name }}
     commands:
-         - cd $SRC_DIR/test && python -m pytest  # [unix]
-         - cd %SRC_DIR%/test && python -m pytest  # [win]
+        - cd $SRC_DIR/test && python -m pytest  # [unix]
+        - cd %SRC_DIR%/test && python -m pytest  # [win]
 
 
 about:
