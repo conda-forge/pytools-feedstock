@@ -9,10 +9,10 @@ Feedstock license: BSD 3-Clause
 
 Summary: A collection of tools for Python
 
-Pytools is a big bag of things that are “missing” from the Python standard
+Pytools is a big bag of things that are "missing" from the Python standard
 library. This is mainly a dependency of my other software packages, and is
-probably of little interest to you unless you use those. If you’re curious
-nonetheless, here’s what’s on offer.
+probably of little interest to you unless you use those. If you're curious
+nonetheless, here's what's on offer.
 
 
 Installing pytools
