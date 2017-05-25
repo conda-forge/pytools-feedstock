@@ -1,6 +1,7 @@
 {% set name = "pytools" %}
-{% set version = "2016.2.6" %}
-{% set sha256 = "6dd49932b8f81a8b622685cff3dd515e351a9290aef0fd5d020e4df00c06aa95" %}
+{% set version = "2017.1" %}
+{% set build_number = "0" %}
+{% set sha256 = "5989d0f7e7f51198542f8d01b894d03481efe25b5177f0bf1f2aec2b4caa6830" %}
 
 package:
     name: {{ name|lower }}
@@ -12,7 +13,7 @@ source:
     sha256: {{ sha256 }}
 
 build:
-    number: 0
+    number: {{ build_number }}
     script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
@@ -35,8 +36,7 @@ test:
     source_files:
         - test
     commands:
-        - cd test && python -m pytest  # [unix]
-        - cd test && python -m pytest  # [win]
+        - cd test && python -m pytest
 
 
 about:
