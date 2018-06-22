@@ -1,7 +1,7 @@
 {% set name = "pytools" %}
-{% set version = "2018.4" %}
+{% set version = "2018.5.1" %}
 {% set build_number = "0" %}
-{% set sha256 = "f9746ef763ce4d7d59ee8506ee83dd684884e4b520244b67f253095decc8a876" %}
+{% set sha256 = "1166855c9e55d059e4da69da2852e9202f293a420f729ba6c6838cb2c30172e0" %}
 
 package:
     name: {{ name|lower }}
@@ -15,13 +15,14 @@ source:
 build:
     number: {{ build_number }}
     noarch: python
-    script: python setup.py install --single-version-externally-managed --record record.txt
+    script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
     build:
         - python
         - setuptools
         - six
+        - pip
     run:
         - python
         - numpy
