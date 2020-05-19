@@ -1,61 +1,61 @@
 {% set name = "pytools" %}
-{% set version = "2020.1" %}
+{% set version = "2020.2" %}
 {% set build_number = 0 %}
-{% set sha256 = "c132d17855584ad61c6e00f3ff11146499755944afc400cce9eae0ecf03d04a6" %}
+{% set sha256 = "3cacefed54148aafb07502c7c907cae8d9327ea35df16e3366c883a706ed5601" %}
 
 package:
-    name: {{ name|lower }}
-    version: {{ version }}
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-    fn: {{ name }}-{{ version }}.tar.gz
-    url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: {{ sha256 }}
+  fn: {{ name }}-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
 
 build:
-    number: {{ build_number }}
-    noarch: python
-    script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: {{ build_number }}
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-    build:
-        - python
-        - setuptools
-        - six
-        - pip
-    run:
-        - python
-        - numpy
-        - decorator >=3.2.0
-        - appdirs >=1.4.0
-        - six
+  build:
+    - python
+    - setuptools
+    - six
+    - pip
+  run:
+    - python
+    - numpy
+    - decorator >=3.2.0
+    - appdirs >=1.4.0
+    - six
 
 test:
-    requires:
-        - pytest
-    imports:
-        - {{ name }}
-    source_files:
-        - test
-    commands:
-        - cd test && python -m pytest
+  requires:
+    - pytest
+  imports:
+    - {{ name }}
+  source_files:
+    - test
+  commands:
+    - cd test && python -m pytest
 
 
 about:
-    home: http://pypi.python.org/pypi/{{ name }}
-    license: MIT
-    license_file: LICENSE
-    summary: A collection of tools for Python
+  home: http://pypi.python.org/pypi/{{ name }}
+  license: MIT
+  license_file: LICENSE
+  summary: A collection of tools for Python
 
-    description: |
-        Pytools is a big bag of things that are "missing" from the Python standard
-        library. This is mainly a dependency of my other software packages, and is
-        probably of little interest to you unless you use those. If you're curious
-        nonetheless, here's what's on offer.
+  description: |
+    Pytools is a big bag of things that are "missing" from the Python standard
+    library. This is mainly a dependency of my other software packages, and is
+    probably of little interest to you unless you use those. If you're curious
+    nonetheless, here's what's on offer.
 
-    dev_url: http://github.com/inducer/{{ name }}
+  dev_url: http://github.com/inducer/{{ name }}
 
 extra:
-    recipe-maintainers:
-        - inducer
-        - ocefpaf
+  recipe-maintainers:
+    - inducer
+    - ocefpaf
