@@ -1,7 +1,7 @@
 {% set name = "pytools" %}
-{% set version = "2020.3.1" %}
+{% set version = "2020.4" %}
 {% set build_number = 0 %}
-{% set sha256 = "86ebb27e8d946b30bc4479f97862066eb26e305d5ad4327230b2b2f8cbf110f9" %}
+{% set sha256 = "37db39ff11a1b5fc8aec875ae4ddb3d6c21aa0e95bddc9c841aa98e1631ae460" %}
 
 package:
   name: {{ name|lower }}
