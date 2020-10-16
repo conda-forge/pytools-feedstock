@@ -5,9 +5,11 @@ Home: http://pypi.python.org/pypi/pytools
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytools-feedstock/blob/master/LICENSE.txt)
 
 Summary: A collection of tools for Python
+
+Development: http://github.com/inducer/pytools
 
 Pytools is a big bag of things that are "missing" from the Python standard
 library. This is mainly a dependency of my other software packages, and is
