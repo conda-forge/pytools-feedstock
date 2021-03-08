@@ -19,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - setuptools
     - six
     - pip
   run:
-    - python
+    - python >=3.6
     - numpy
     - decorator >=3.2.0
     - appdirs >=1.4.0
