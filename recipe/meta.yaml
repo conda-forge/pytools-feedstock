@@ -1,6 +1,6 @@
 {% set name = "pytools" %}
 {% set version = "2021.2.2" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 {% set sha256 = "7d3c37714c0ccdfe40296f526927735080e9defb8e09dd3d438e5328badadf14" %}
 
 package:
@@ -21,14 +21,11 @@ requirements:
   host:
     - python >=3.6
     - setuptools
-    - six
     - pip
   run:
     - python >=3.6
     - numpy
-    - decorator >=3.2.0
     - appdirs >=1.4.0
-    - six
 
 test:
   requires:
