@@ -1,7 +1,7 @@
 {% set name = "pytools" %}
-{% set version = "2022.1.1" %}
+{% set version = "2022.1.2" %}
 {% set build_number = 0 %}
-{% set sha256 = "3eebcc11923bf36fc42a9102d6e417a94817efb1aeb24d3149686dd5e3ec54d4" %}
+{% set sha256 = "5e824101880a246354756365880a65bb416f6a8cab6513b68fcbb48fba090fcb" %}
 
 package:
   name: {{ name|lower }}
