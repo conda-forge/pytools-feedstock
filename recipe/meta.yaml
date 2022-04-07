@@ -30,6 +30,7 @@ requirements:
 test:
   requires:
     - pytest
+    - numpy
   imports:
     - {{ name }}
   source_files:
