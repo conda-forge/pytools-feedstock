@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - numpy
+    - typing_extensions  # [py<311]
     - appdirs >=1.4.0
 
 test:
