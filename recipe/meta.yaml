@@ -24,7 +24,7 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - typing_extensions  # [py<311]
+    - typing_extensions
     - appdirs >=1.4.0
 
 test:
