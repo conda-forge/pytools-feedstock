@@ -1,5 +1,5 @@
 {% set name = "pytools" %}
-{% set version = "2022.1.8" %}
+{% set version = "2022.1.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1d793b4e01dd23704b62237ea5725d7ce772870fab7863f7903c41017bf5d79b
+  sha256: 3393d25029982080e3fb94c47bf627a1e553ccd174fe2edef6c1c5ec723918ff
 
 build:
   number: 0
@@ -21,7 +21,6 @@ requirements:
     - pip
   run:
     - python >=3.6
-    - numpy >=1.6.0
     - platformdirs >=2.2.0
     - typing_extensions
     - appdirs >=1.4.0
@@ -30,6 +29,7 @@ test:
   requires:
     - pytest
     - pip
+    - numpy >=1.6.0
   imports:
     - pytools
   source_files:
