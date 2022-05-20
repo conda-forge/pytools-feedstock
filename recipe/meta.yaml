@@ -40,7 +40,7 @@ test:
 
 
 about:
-  home: http://pypi.python.org/pypi/{{ name }}
+  home: https://pypi.python.org/pypi/{{ name }}
   license: MIT
   license_file: LICENSE
   summary: A collection of tools for Python
@@ -51,9 +51,11 @@ about:
     probably of little interest to you unless you use those. If you're curious
     nonetheless, here's what's on offer.
 
-  dev_url: http://github.com/inducer/{{ name }}
+  dev_url: https://github.com/inducer/{{ name }}
+  doc_url: https://documen.tician.de/{{ name }}
 
 extra:
   recipe-maintainers:
     - inducer
     - ocefpaf
+    - matthiasdiener
