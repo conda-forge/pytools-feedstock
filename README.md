@@ -1,7 +1,7 @@
 About pytools
 =============
 
-Home: http://pypi.python.org/pypi/pytools
+Home: https://pypi.python.org/pypi/pytools
 
 Package license: MIT
 
@@ -9,7 +9,9 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pytools-feedsto
 
 Summary: A collection of tools for Python
 
-Development: http://github.com/inducer/pytools
+Development: https://github.com/inducer/pytools
+
+Documentation: https://documen.tician.de/pytools
 
 Pytools is a big bag of things that are "missing" from the Python standard
 library. This is mainly a dependency of my other software packages, and is
@@ -152,5 +154,6 @@ Feedstock Maintainers
 =====================
 
 * [@inducer](https://github.com/inducer/)
+* [@matthiasdiener](https://github.com/matthiasdiener/)
 * [@ocefpaf](https://github.com/ocefpaf/)
 
