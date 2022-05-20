@@ -29,13 +29,14 @@ requirements:
 test:
   requires:
     - pytest
+    - pip
   imports:
     - pytools
   source_files:
     - test
   commands:
+    - pip check
     - cd test && python -m pytest
-
 
 about:
   home: https://pypi.python.org/pypi/pytools
