@@ -1,5 +1,5 @@
 {% set name = "pytools" %}
-{% set version = "2022.1.9" %}
+{% set version = "2022.1.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3393d25029982080e3fb94c47bf627a1e553ccd174fe2edef6c1c5ec723918ff
+  sha256: 7c949e6838f90ee4931e5b868c6998782c129c0d9409cedb94f499bab400331e
 
 build:
   number: 0
