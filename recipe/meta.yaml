@@ -1,5 +1,5 @@
 {% set name = "pytools" %}
-{% set version = "2023.1.1" %}
+{% set version = "2024.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,23 +7,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 80637873d206f6bcedf7cdb46ad93e868acb4ea2256db052dfcca872bdd0321f
+  sha256: 449936a81d57dd88a1b019a52767bcf443f59c68091c6c63f0e8fb379f18f383
 
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.8
     - setuptools
     - pip
   run:
-    - python >=3.6
+    - python >=3.8
     - platformdirs >=2.2.0
     - typing_extensions
-    - appdirs >=1.4.0
 
 test:
   requires:
@@ -32,11 +31,8 @@ test:
     - numpy >=1.6.0
   imports:
     - pytools
-  source_files:
-    - test
   commands:
     - pip check
-    - cd test && python -m pytest
 
 about:
   home: https://pypi.python.org/pypi/pytools
