@@ -31,8 +31,6 @@ test:
     - numpy >=1.6.0
   imports:
     - pytools
-  source_files:
-    - pytools
   commands:
     - pip check
     - python -m pytest --pyargs pytools
