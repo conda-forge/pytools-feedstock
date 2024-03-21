@@ -32,10 +32,10 @@ test:
   imports:
     - pytools
   source_files:
-    - test
+    - pytools/test
   commands:
     - pip check
-    - cd test && python -m pytest
+    - cd pytools/test && python -m pytest
 
 about:
   home: https://pypi.python.org/pypi/pytools
