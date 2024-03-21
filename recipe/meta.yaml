@@ -35,7 +35,7 @@ test:
     - pytools
   commands:
     - pip check
-    - $PYTHON -m pytest pytools
+    - python -m pytest --pyargs pytools
 
 about:
   home: https://pypi.python.org/pypi/pytools
