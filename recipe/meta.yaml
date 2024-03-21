@@ -35,7 +35,7 @@ test:
     - pytools/test
   commands:
     - pip check
-    - cd pytools/test && python -m pytest
+    - pip install -e . && python -m pytest
 
 about:
   home: https://pypi.python.org/pypi/pytools
