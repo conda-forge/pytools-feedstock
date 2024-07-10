@@ -1,5 +1,5 @@
 {% set name = "pytools" %}
-{% set version = "2024.1.6" %}
+{% set version = "2024.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: bbdb7506b0966a44a177c5e555675bece1e65e15bbb1114f370b223e069322b9
+  sha256: 3eeb371c56e2010ae0f4d6a28fb7aad4eacc24b366520f32b6bf294df8a69c94
 
 build:
   number: 0
@@ -20,8 +20,9 @@ requirements:
     - setuptools
     - pip
   run:
+    - siphash24 >=1.6
     - python >=3.8
-    - platformdirs >=2.2.0
+    - platformdirs >=2.2
     - typing_extensions >=4.0
 
 test:
