@@ -1,3 +1,4 @@
+{% set python_min = python_min|default("3.8") %}
 {% set name = "pytools" %}
 {% set version = "2024.1.15" %}
 
@@ -16,18 +17,19 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools
+    - python {{ python_min }}
+    - hatchling
     - pip
   run:
+    - python >={{ python_min }}
     - typing-extensions >=4
     - siphash24 >=1.6
-    - python >=3.8
     - platformdirs >=2.2
     - typing_extensions >=4
 
 test:
   requires:
+    - python {{ python_min }}
     - pytest
     - pip
     - numpy >=1.6.0
