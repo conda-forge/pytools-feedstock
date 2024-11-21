@@ -1,4 +1,4 @@
-{% set python_min = python_min|default("3.10") %}
+{% set python_min = "3.10" %}
 {% set name = "pytools" %}
 {% set version = "2024.1.16" %}
 
@@ -20,6 +20,7 @@ requirements:
     - python {{ python_min }}
     - hatchling
     - pip
+    - hatchling
   run:
     - python >={{ python_min }}
     - typing-extensions >=4
