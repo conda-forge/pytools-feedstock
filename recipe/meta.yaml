@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "pytools" %}
-{% set version = "2024.1.17" %}
+{% set version = "2024.1.18" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 88bcb0354532bd050db73cb10be0817e587f98a50bd58e4016d5b7f6f8aab84c
+  sha256: 33237c1eddec0cc11056671c33a4442e8f45f68159b506fb6db63c5889b7db0d
 
 build:
   number: 0
