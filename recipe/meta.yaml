@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "pytools" %}
-{% set version = "2024.1.19" %}
+{% set version = "2024.1.20" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dc954042dc67dd16c8031129f3afe750675624f6459b23e96a5d21699b699401
+  sha256: 649fc68eb9568c80f676dbf3256b38e2a5783a538ffc700db74e14946c50d7d3
 
 build:
   number: 0
@@ -26,7 +26,7 @@ requirements:
     - typing-extensions >=4
     - siphash24 >=1.6
     - platformdirs >=2.2
-    - typing_extensions >=4
+    - typing_extensions >=4.5
 
 test:
   requires:
